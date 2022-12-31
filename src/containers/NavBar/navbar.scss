@@ -1,0 +1,9 @@
+.app__navbar {
+    backdrop-filter: blur(4px);
+}
+
+.app__navbar-links {
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
