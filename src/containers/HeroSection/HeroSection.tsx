@@ -40,7 +40,7 @@ function HeroSection() {
               <SkillCard image={images.machineLearning} title={"Machine Learning"} />
             </div>
             <div className="xl:col-start-1 xl:col-span-1 xl:w-[150px] w-[30%]" >
-              <SkillCard image={images.appDeveloper} title={"Application Developer"} />
+              <SkillCard image={images.appDeveloper} title={"Mobile Developer"} />
             </div>
           </motion.div>
         </div>
