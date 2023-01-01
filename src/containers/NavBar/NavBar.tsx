@@ -17,7 +17,7 @@ function NavBar() {
   function onClickCloseMenu() { setToggleMenu(false) }
 
   return (
-    <nav className="app__navbar w-full flex justify-between items-center p-4 bg-[rgba(255, 255, 255, 0.25)] z-[2]" >
+    <nav className="app__navbar w-full flex justify-between items-center p-4 bg-[rgba(255, 255, 255, 0.25)] z-[2] fixed" >
       <div className="flex justify-center items-center cursor-pointer w-[100px] h-[40px]" >
         {/*<img src={images.logo} alt="logo" className="w-[100px] h-[40px]" />*/}
         <h1 className="font-bold text-[24px]" >sam</h1>
@@ -38,7 +38,7 @@ function NavBar() {
         <FiMenu onClick={onClickOpenMenu} className="text-[25px] cursor-pointer" />
         {toggleMenu && (
           <div className="fixed top-0 bottom-0 right-0 z-[5] p-4 w-[300px]" >
-            <div className="bg-[#edf2f8] py-4 px-5 rounded-xl backdrop-blur-sm" >
+            <div className="bg-[#FFFFFF] py-4 px-5 rounded-xl backdrop-blur-sm shadow-2xl" >
               <div className="flex justify-between items-baseline" >
                 <ul className="" >
                   {NavBarItems.map((item, index) => (
@@ -48,7 +48,7 @@ function NavBar() {
                     </li>
                   ))}
                 </ul>
-                <MdClose onClick={onClickCloseMenu} className="text-lg" />
+                <MdClose onClick={onClickCloseMenu} className="text-lg cursor-pointer" />
               </div>
               <hr className="my-5 bg-[#B3B3B8]" />
               <div className="w-[100px] h-[40px] bg-[#313bac] flex justify-center items-center rounded-xl shadow-lg" >
