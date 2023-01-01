@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import { NavBar } from "./containers";
+import { NavBar, HeroSection } from "./containers";
 
 import "./App.scss";
 
@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App app">
       <NavBar />
+      <HeroSection />
     </div>
   )
 };

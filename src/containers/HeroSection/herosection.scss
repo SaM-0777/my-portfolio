@@ -1,0 +1,30 @@
+#Home {
+    background: url('../../assets/bgIMG.png');
+    // background-color: red;
+}
+
+/*.app__header {
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
+    }
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 400px) {
+        padding: 6rem 1rem 2rem;
+    }
+}
+*/
+/*.app__header-info {
+    @media screen and (max-width: 2000px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}*/
+
+.app__overlay-circle {
+    @media screen and (max-width: 1200px) {
+        margin: 2rem 0rem;
+    }
+}
+

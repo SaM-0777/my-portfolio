@@ -17,9 +17,11 @@ function NavBar() {
   function onClickCloseMenu() { setToggleMenu(false) }
 
   return (
-    <nav className="app__navbar w-full flex justify-between items-center p-4 bg-[rgba(255, 255, 255, 0.25)] fixed z-[2]" >
-      <div className="flex justify-center items-center cursor-pointer" >
-        <img src={images.logo} alt="logo" className="w-[100px] h-[40px]" />
+    <nav className="app__navbar w-full flex justify-between items-center p-4 bg-[rgba(255, 255, 255, 0.25)] z-[2]" >
+      <div className="flex justify-center items-center cursor-pointer w-[100px] h-[40px]" >
+        {/*<img src={images.logo} alt="logo" className="w-[100px] h-[40px]" />*/}
+        <h1 className="font-bold text-[24px]" >sam</h1>
+        <h1 className="font-bold text-[24px] text-[#313bac]" >.dev</h1>
       </div>
       <ul className="hidden md:flex justify-center items-center" >
         {NavBarItems.map((item, index) => (
