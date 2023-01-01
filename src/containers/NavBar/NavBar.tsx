@@ -17,11 +17,11 @@ function NavBar() {
   function onClickCloseMenu() { setToggleMenu(false) }
 
   return (
-    <nav className="app__navbar w-full flex justify-between items-center px-4 py-8 bg-[rgba(255, 255, 255, 0.25)] border border-solid border-[rgba(255, 255, 255, 0.18)] fixed z-[2]" >
-      <div className="flex justify-center items-center" >
-        <img src={images.logo} alt="logo" className="w-[90px] h-[20px] 2xl:w-[180px] 2xl:h-[40px]" />
+    <nav className="app__navbar w-full flex justify-between items-center p-4 bg-[rgba(255, 255, 255, 0.25)] fixed z-[2]" >
+      <div className="flex justify-center items-center cursor-pointer" >
+        <img src={images.logo} alt="logo" className="w-[100px] h-[40px]" />
       </div>
-      <ul className="app__navbar-links flex justify-center items-center" >
+      <ul className="hidden md:flex justify-center items-center" >
         {NavBarItems.map((item, index) => (
           <li key={index.toString()} className="my-0 mx-4 cursor-pointer flex-col" >
             <div className="w-[5px] h-[5px] bg-transparent rounded-[50%] mb-[5px]" />
@@ -29,10 +29,10 @@ function NavBar() {
           </li>
         ))}
       </ul>
-      <div className="w-[100px] h-[40px] bg-[#313bac] flex justify-center items-center rounded-xl shadow-lg" >
+      <div className="hidden md:flex w-[100px] h-[40px] bg-[#313bac] justify-center items-center rounded-xl shadow-lg" >
         <a className="text-[#FFFFFF] text-sm" href={`#lets-talk`} >{"LET'S TALK"}</a>
       </div>
-      <div className='' >
+      <div className='md:hidden' >
         <FiMenu onClick={onClickOpenMenu} className="text-[25px] cursor-pointer" />
         {toggleMenu && (
           <div className="fixed top-0 bottom-0 right-0 z-[5] p-4 w-[300px]" >
