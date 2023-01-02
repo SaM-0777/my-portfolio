@@ -19,7 +19,7 @@ function HeroSection() {
   }
 
   return (
-    <div id="Home" className="relative bg-cover bg-repeat bg-center pt-20 flex-3 w-full h-full" >
+    <div id="Home" className="relative bg-cover bg-repeat bg-center pt-20 flex-3 w-full h-full snap-start" >
       <div className="xl:flex xl:flex-row flex-col justify-between items-center md:mx-10 mx-3" >
         <motion.div whileInView={{ y: [50, 0], opacity: [0, 1] }} transition={{ duration: 0.5 }} className="flex flex-1 flex-col justify-start items-start md:w-[400px] xl:w-full" >
           <h3 className="text-[20px] font-bold" >Hello, I am</h3>
