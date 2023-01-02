@@ -1,12 +1,13 @@
 .app {
-  // background-image: url('./assets/bgIMG.png');
-  background-repeat: repeat;
-  background-size: contain;
-  height: 100vh;
-  background-color: var(--primary-color);
+  background-image: url('./assets/bgIMG.png');
+  background-attachment: fixed;
+  // background-repeat: repeat;
+  background-size: cover;
+  // height: 100vh;
+  // background-color: var(--primary-color);
   font-family: var(--font-base);
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+  // overflow-y: scroll;
 }
 
 .app__whitebg {
