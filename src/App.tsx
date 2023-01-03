@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { NavBar, HeroSection, About, Works } from "./containers";
+import { NavBar, HeroSection, About, Works, Skills } from "./containers";
 import { SocialMedia, ScrollDots } from "./components";
 
 import "./App.scss";
@@ -14,6 +14,7 @@ function App() {
       <HeroSection />
       <About />
       <Works />
+      <Skills />
       {/*<ScrollDots index={1} />*/}
     </div>
   )
