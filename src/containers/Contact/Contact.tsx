@@ -27,19 +27,10 @@ function Contact({ handleModal }: ContactType) {
 
   function handleOnChange(e:any) {
     const { name, value } = e.target
-    console.log(name, value)
+    // console.log(name, value)
     
     setFormData({...formData, [name]: value})
   }
-
-  useEffect(() => {
-    console.log(formData)
-  
-    return () => {
-      
-    }
-  }, [formData])
-  
 
   async function handleSubmit(e: any) {
     e.preventDefault()
@@ -55,7 +46,7 @@ function Contact({ handleModal }: ContactType) {
       await client.create(contact)
       setIsFormSubmitted(true)
     } catch (error) {
-      console.log(error)
+      // console.log(error)
     }
     setLoading(false)
   }

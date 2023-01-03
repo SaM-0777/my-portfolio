@@ -50,7 +50,7 @@ function Works() {
       setData(response)
       setFilterWorks(response)
     } catch (error) {
-      console.log("Error Works: ", error)
+      // console.log("Error Works: ", error)
     }
   }
 

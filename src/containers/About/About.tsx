@@ -37,7 +37,7 @@ function About() {
       // const resolvedResponse: AboutProfileObjectType[] = Promise.resolve(response)
       setAboutProfile(response)
     } catch (error) {
-      console.log("About-Sanity Error: ", error);
+      // console.log("About-Sanity Error: ", error);
     }
   }
 

@@ -13,15 +13,6 @@ function App() {
   function closeContactModal() { setIsContactVisible(false) }
   function openContactModal() { setIsContactVisible(true) }
 
-  useEffect(() => {
-    console.log(isContactVisible)
-  
-    return () => {
-      
-    }
-  }, [isContactVisible])
-  
-
   return (
     <div className="App app xl:overflow-y-scroll xl:snap-y xl:snap-mandatory xl:h-[100vh]">
       <SocialMedia />

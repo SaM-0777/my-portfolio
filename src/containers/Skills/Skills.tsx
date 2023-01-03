@@ -53,7 +53,7 @@ function Skills() {
       // console.log(experiencesResponse)
       // console.log(skillResponse)
     } catch (error) {
-      console.log("Error fetching Exp & Skill: ", error)
+      // console.log("Error fetching Exp & Skill: ", error)
     }
   }
 
