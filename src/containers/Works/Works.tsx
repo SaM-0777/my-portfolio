@@ -33,7 +33,7 @@ function Works() {
   }
 
   async function getData() {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works"]'
     try {
       const response: WorksObjectType[] = await client.fetch(query)
       setFilterWorks(response)
