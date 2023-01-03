@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
+import { AnimationWrapper } from "../../hoc";
 import { client, urlFor } from "../../utils/sanity/client";
 
 import "./works.scss";
@@ -60,7 +61,7 @@ function Works() {
   
 
   return (
-    <div className="w-full h-full flex-1 flex-col flex items-center justify-center snap-start xl:mt-0 md:mt-[5rem] mt-[2rem]">
+    <div id="Works" className="w-full h-full flex-1 flex-col flex items-center justify-center snap-start xl:mt-0 md:mt-[5rem] mt-[2rem]">
       <h2 className="md:text-[2.75rem] xl:[4rem] text-[1.75rem] font-[800] text-center text-[#030303] capitalize">My Creative<span className="text-[#313bac]" > Portfolio</span> Section</h2>
       <div className="app__work-filter" >
         {MyWorks.map((item, i) => (

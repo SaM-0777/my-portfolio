@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import { AnimationWrapper } from "../../hoc";
 import { images } from "../../constants";
 
 import { client, urlFor } from "../../utils/sanity/client";
+
+// import "./about.scss";
 
 
 /*const AboutProfile = [
@@ -62,4 +65,5 @@ function About() {
 
 
 export default About;
+// export default AnimationWrapper(About, "app__about");
 

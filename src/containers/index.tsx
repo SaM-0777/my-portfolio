@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import About from "./About";
 import Works from "./Works";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 
 export {
@@ -11,5 +12,6 @@ export {
     About,
     Works,
     Skills,
+    Contact,
 };
 

@@ -63,7 +63,7 @@ function Skills() {
   }, [])
 
   return (
-    <div className="w-full h-full flex-1 flex items-center justify-center flex-col snap-start xl:mt-0 md:mt-[5rem] mt-[2rem]" >
+    <div id="Skills" className="w-full h-full flex-1 flex-col flex items-center justify-center snap-start xl:mt-0 md:mt-[5rem] mt-[2rem]" >
       <h2 className="head-text" >Skill & Experiences</h2>
       <div className="app__skills-container" >
         <motion.div className="app__skills-list" >
@@ -84,15 +84,13 @@ function Skills() {
               </div>
               <motion.div className="app__skills-exp-works" >
                 {exp.works.map((item, i) => (
-                  <>
-                    <motion.div key={i.toString()} id="tooltip-anchor" whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }} className="app__skills-exp-work" >
+                  <div key={i.toString()} >
+                    <motion.div id="tooltip-anchor" whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }} className="app__skills-exp-work" >
                       <h4 className="bold-text" >{item.name}</h4>
                       <p className="p-text" >{item.company}</p>
                     </motion.div>
-                    <ReactTooltip anchorId="tooltip-anchor" id={item.name} className="max-w-[300px] bg-white text-[#6b7688] shadow-xl rounded-xl p-4 text-center leading-[1.5] opacity-100" >
-                      {item.desc}
-                    </ReactTooltip>
-                  </>
+                    {/*<ReactTooltip anchorId="tooltip-anchor" id={item.name} className="max-w-[300px] bg-white text-[#6b7688] shadow-xl rounded-xl p-4 text-center leading-[1.5] opacity-100" />*/}
+                  </div>
                 ))}
               </motion.div>
             </motion.div>

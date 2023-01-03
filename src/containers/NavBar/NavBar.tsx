@@ -8,9 +8,13 @@ import { images } from "../../constants";
 import "./navbar.scss";
 
 
+type NavBarProps = {
+  openContactModal: () => void;
+};
+
 const NavBarItems = ["Home", "About me", "Works", "Skills"];
 
-function NavBar() {
+function NavBar({ openContactModal }: NavBarProps) {
   const [toggleMenu, setToggleMenu] = useState(false)
 
   function onClickOpenMenu() { setToggleMenu(true) }
@@ -31,8 +35,8 @@ function NavBar() {
           </li>
         ))}
       </ul>
-      <div className="hidden md:flex w-[100px] h-[40px] bg-[#313bac] justify-center items-center rounded-xl shadow-lg" >
-        <a className="text-[#FFFFFF] text-sm" href={`#lets-talk`} >{"LET'S TALK"}</a>
+      <div onClick={openContactModal} className="hidden md:flex w-[100px] h-[40px] bg-[#313bac] justify-center items-center rounded-xl shadow-lg cursor-pointer" >
+        <div className="text-[#FFFFFF] text-sm" >{"LET'S TALK"}</div>
       </div>
       <div className='md:hidden' >
         <FiMenu onClick={onClickOpenMenu} className="text-[25px] cursor-pointer" />
@@ -51,8 +55,8 @@ function NavBar() {
                 <MdClose onClick={onClickCloseMenu} className="text-lg cursor-pointer" />
               </div>
               <hr className="my-5 bg-[#B3B3B8]" />
-              <div className="w-[100px] h-[40px] bg-[#313bac] flex justify-center items-center rounded-xl shadow-lg" >
-                <a className="text-[#FFFFFF] text-sm" href={`#lets-talk`} >{"LET'S TALK"}</a>
+              <div onClick={openContactModal} className="w-[100px] h-[40px] bg-[#313bac] flex justify-center items-center rounded-xl shadow-lg" >
+                <a className="text-[#FFFFFF] text-sm" href={``} >{"LET'S TALK"}</a>
               </div>
             </div>
           </div>
