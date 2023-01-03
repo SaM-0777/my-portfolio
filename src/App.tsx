@@ -1,17 +1,20 @@
-import { useState } from "react"
+import { useState } from "react";
 
-import { NavBar, HeroSection, About } from "./containers";
+import { NavBar, HeroSection, About, Works } from "./containers";
+import { SocialMedia, ScrollDots } from "./components";
 
 import "./App.scss";
 
 
 function App() {
-
   return (
     <div className="App app xl:overflow-y-scroll xl:snap-y xl:snap-mandatory xl:h-[100vh]">
+      <SocialMedia />
       <NavBar />
       <HeroSection />
       <About />
+      <Works />
+      {/*<ScrollDots index={1} />*/}
     </div>
   )
 };
