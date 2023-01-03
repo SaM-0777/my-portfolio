@@ -25,17 +25,28 @@ const MyWorks = ["Web Developer", "App Developer", "React-Redux", "MERN Stack", 
 function Works() {
   const [data, setData] = useState<WorksObjectType[]>([])
   const [filterWorks, setFilterWorks] = useState<WorksObjectType[]>([])
-  const [activeFilter, setActiveFilter] = useState(4)
+  const [activeFilter, setActiveFilter] = useState<string>("All")
   const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1})
 
   function handleWorkFilter(item: string) {
-    // console.log(item)
+    setActiveFilter(item)
+    setAnimateCard({ y: 100, opacity: 0 })
+    
+    setTimeout(function () {
+      setAnimateCard({ y: 0, opacity: 1 })
+      if (item === 'All') {
+        setFilterWorks(data)
+      } else {
+        setFilterWorks(data.filter(work => work.tags.includes(item)))
+      }
+    }, 500)
   }
 
   async function getData() {
     const query = '*[_type == "works"]'
     try {
       const response: WorksObjectType[] = await client.fetch(query)
+      setData(response)
       setFilterWorks(response)
     } catch (error) {
       console.log("Error Works: ", error)
@@ -53,7 +64,7 @@ function Works() {
       <h2 className="md:text-[2.75rem] xl:[4rem] text-[1.75rem] font-[800] text-center text-[#030303] capitalize">My Creative<span className="text-[#313bac]" > Portfolio</span> Section</h2>
       <div className="app__work-filter" >
         {MyWorks.map((item, i) => (
-          <div key={i.toString()} onClick={() => handleWorkFilter(item)} className={`app__work-filter-item app__flex p-text ${activeFilter === i ? 'item-active' : ''}`} >{item}</div>
+          <div key={i.toString()} onClick={() => handleWorkFilter(item)} className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`} >{item}</div>
         ))}
       </div>
       <motion.div animate={animateCard} transition={{ duration: 0.5, delayChildren: 0.5 }} className="app__work-portfolio" >
