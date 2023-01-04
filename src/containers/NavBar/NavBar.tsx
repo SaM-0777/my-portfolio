@@ -21,7 +21,7 @@ function NavBar({ openContactModal }: NavBarProps) {
   function onClickCloseMenu() { setToggleMenu(false) }
 
   return (
-    <nav className="app__navbar w-full flex justify-between items-center py-4 px-10 bg-[rgba(255, 255, 255, 0.25)] z-[2] fixed" >
+    <nav className="app__navbar w-full flex justify-between items-center py-4 md:px-10 px:3 bg-[rgba(255, 255, 255, 0.25)] z-[2] fixed" >
       <div className="flex justify-center items-center cursor-pointer w-[100px] h-[40px]" >
         {/*<img src={images.logo} alt="logo" className="w-[100px] h-[40px]" />*/}
         <h1 className="font-bold text-[24px]" >sam</h1>
@@ -56,7 +56,7 @@ function NavBar({ openContactModal }: NavBarProps) {
               </div>
               <hr className="my-5 bg-[#B3B3B8]" />
               <div onClick={openContactModal} className="w-[100px] h-[40px] bg-[#313bac] flex justify-center items-center rounded-xl shadow-lg" >
-                <a className="text-[#FFFFFF] text-sm" href={``} >{"LET'S TALK"}</a>
+                <div className="text-[#FFFFFF] text-sm" >{"LET'S TALK"}</div>
               </div>
             </div>
           </div>
