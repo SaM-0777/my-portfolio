@@ -94,7 +94,7 @@ function Contact({ handleModal }: ContactType) {
           </form>
         :
           <div>
-            <h3 className="head-text" >Thank you for getting in touch.</h3>
+            <h3 className="text-capitalize font-[800] text-center text-[2rem] text-[#030303]" >Thank you for getting in touch.</h3>
           </div>
         }
       </motion.div>
