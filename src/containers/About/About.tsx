@@ -48,7 +48,7 @@ function About() {
   }, [aboutProfile])
 
   return (
-    <div id="About me" className="h-full w-full flex-1 flex-col flex items-center justify-center snap-start xl:mt-0 md:mt-[5rem] mt-[2rem]" >
+    <div id="About me" className="h-full w-full flex-1 flex-col flex items-center justify-center snap-start xl:my-20 md:my-[5rem] my-[5rem]" >
       <h4 className="md:text-[2.75rem] xl:[4rem] text-[1.75rem] font-[800] text-center text-[#030303] capitalize" >I know that <span className="text-[#313bac]" >Good Design</span> <br /> means <span>Good Business</span></h4>
       <div className="flex justify-center items-start flex-wrap mt-[2rem]" >
         {aboutProfile.map((item, i) => (

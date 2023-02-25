@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 
 
@@ -19,6 +19,11 @@ function SocialMedia() {
       <a href="https://www.linkedin.com/in/sam-07-dev" target="_blank" rel="noreferrer" >
         <motion.div whileInView={{ opacity: 1 }} whileHover={{ scale: 1.1 }} transition={{ duration: 0.3, type: 'tween' }} className="hover:shadow-lg transition-shadow duration-300" >
             <BsLinkedin color="#0A66C2" />
+        </motion.div>
+      </a>
+      <a href="https://www.instagram.com/realmwave" target="_blank" rel="noreferrer" >
+        <motion.div whileInView={{ opacity: 1 }} whileHover={{ scale: 1.1 }} transition={{ duration: 0.3, type: 'tween' }} className="hover:shadow-lg transition-shadow duration-300" >
+            <BsInstagram color="#d62976" />
         </motion.div>
       </a>
     </div>

@@ -14,7 +14,7 @@ function App() {
   function openContactModal() { setIsContactVisible(true) }
 
   return (
-    <div className="App app xl:overflow-y-scroll xl:snap-y xl:snap-mandatory xl:h-[100vh]">
+    <div className="App app min-h-screen">
       <SocialMedia />
       <NavBar openContactModal={openContactModal} />
       <HeroSection />
